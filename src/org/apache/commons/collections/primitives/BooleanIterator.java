@@ -19,37 +19,42 @@ package org.apache.commons.collections.primitives;
 /**
  * An iterator over <code>boolean</code> values.
  *
- * @see org.apache.commons.collections.primitives.adapters.BooleanIteratorIterator
- * @see org.apache.commons.collections.primitives.adapters.IteratorBooleanIterator
+ * @see
+ * org.apache.commons.collections.primitives.adapters.BooleanIteratorIterator
+ * @see
+ * org.apache.commons.collections.primitives.adapters.IteratorBooleanIterator
  *
  * @since Commons Primitives 1.1
  * @version $Revision$ $Date$
  */
 public interface BooleanIterator {
 
-	/**
-	 * Returns <code>true</code> iff I have more elements. (In other words, returns <code>true</code> iff a subsequent call
-	 * to {@link #next next} will return an element rather than throwing an exception.)
-	 *
-	 * @return <code>true</code> iff I have more elements
-	 */
-	boolean hasNext();
+ /**
+  * Returns <code>true</code> iff I have more elements. (In other words, returns
+  * <code>true</code> iff a subsequent call to {@link #next next} will return an
+  * element rather than throwing an exception.)
+  *
+  * @return <code>true</code> iff I have more elements
+  */
+ boolean hasNext();
 
-	/**
-	 * Returns the next element in me.
-	 *
-	 * @return the next element in me
-	 * @throws java.util.NoSuchElementException if there is no next element
-	 */
-	boolean next();
+ /**
+  * Returns the next element in me.
+  *
+  * @return the next element in me
+  * @throws java.util.NoSuchElementException if there is no next element
+  */
+ boolean next();
 
-	/**
-	 * Removes from my underlying collection the last element {@link #next
-	 * returned} by me (optional operation).
-	 *
-	 * @throws UnsupportedOperationException if this operation is not supported
-	 * @throws IllegalStateException if {@link #next} has not yet been called, or {@link #remove} has already been called
-	 * since the last call to {@link #next}.
-	 */
-	void remove();
+ /**
+  * Removes from my underlying collection the last element {@link #next
+  * returned} by me (optional operation).
+  *
+  * @throws UnsupportedOperationException if this operation is not supported
+  * @throws IllegalStateException if {@link #next} has not yet been called, or
+  * {@link #remove} has already been called since the last call to
+  * {@link #next}.
+  */
+ void remove();
+
 }
